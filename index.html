@@ -354,6 +354,23 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
     .lightbox-count { margin-right: auto; padding-left: .4rem; font-variant-numeric: tabular-nums; }
     .lightbox button { min-width: 44px; min-height: 44px; background: transparent; border: 0; color: inherit; cursor: pointer; font: inherit; }
     .lightbox button:hover, .lightbox button:focus-visible { background: #3b3b38; }
+    :root { color-scheme: light; }
+    @media (prefers-color-scheme: dark) {
+      :root { color-scheme: dark; }
+      body { background: #191a19; color: #f4f1eb; }
+      .introduction, .photo-stage { background: #191a19; }
+      .photo-stage::after {
+        background: linear-gradient(to bottom, #191a19 0% 14%, rgb(25 26 25 / 95%) 17%, rgb(25 26 25 / 60%) 21%, transparent 26%);
+      }
+      .vehicle-facts, .brochure { background: #242524; }
+      .vehicle-facts dt, .brochure { color: #c9c7c1; }
+      .brochure a { color: #f4f1eb; }
+      .vehicle-facts, .vehicle-facts .mileage, .modifications-list, .modifications-list > div { border-color: #494a46; }
+      .registration-note p { color: #f4ebe5; background: #302827; border-color: #db7984; }
+      .photo-first .specs-jump { background: #242524; color: #f4f1eb; }
+      .photo-first .specs-jump:hover { background: #363735; }
+      .specs-jump:focus-visible { outline-color: #fff; }
+    }
   </style>
 </head>
 <body>
