@@ -232,10 +232,33 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
     }
     .registration-note {
       width: min(100%, 90rem);
-      margin: 1.5rem auto 0;
+      margin: clamp(1.25rem, 3vw, 2.5rem) auto 0;
       padding-inline: clamp(1.5rem, 7vw, 7rem);
-      color: #595953;
+    }
+    .registration-note p {
+      display: flex;
+      align-items: center;
+      gap: .9rem;
+      width: fit-content;
+      margin: 0;
+      padding: .9rem 1.15rem;
+      border-inline-start: 3px solid #972c39;
+      background: #f2ece7;
+      color: #332f2d;
       font: 400 1rem/1.5 "Geist Sans", system-ui, sans-serif;
+    }
+    .plate-icon {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 2.5rem;
+      height: 1.4rem;
+      border: 1px solid #50462b;
+      border-left: .35rem solid #264778;
+      border-radius: .22rem;
+      background: #f4ca57;
+      color: #29251d;
+      font: 650 .8rem/1 "Geist Sans", system-ui, sans-serif;
     }
     article {
       width: min(100%, 90rem);
@@ -358,7 +381,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       <p class="brochure"><a href="Mazda-MX-5-Senshu-brochure.pdf" download>Download the Senshu brochure</a> (PDF, German)</p>
       </section>
     </header>
-    <p id="registration" class="registration-note">The car is now registered in the Netherlands and has Dutch license plates.</p>
+    <aside id="registration" class="registration-note" aria-label="Registration">
+      <p><span class="plate-icon" aria-hidden="true">NL</span><span>The car is now registered in the Netherlands and has Dutch license plates.</span></p>
+    </aside>
     <article>
       <p>I’m <a href="https://www.linkedin.com/in/balintkleri/">Bálint</a>, and I’m the second owner of this car. In our family, we call it Little Tractor (“Kis Traktor” in Hungarian, “Kleine Trekker” in Dutch).</p>
       <p>Its first owner bought it new in Sweden. After he passed away, his brother brought the car to Hungary and put it up for sale. I bought it there in February 2022 with 68,000 km on the clock, and I’ve felt lucky to look after it ever since. When my wife and I moved to the Netherlands in 2024, the car came with us.</p>
